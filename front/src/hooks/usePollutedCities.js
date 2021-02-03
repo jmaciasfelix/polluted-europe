@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+//constants
+import { ENDPOINT } from "src/constant";
 //SocketsIo
 import socketIOClient from "socket.io-client";
 
@@ -8,7 +10,6 @@ import socketIOClient from "socket.io-client";
  */
 export function usePollutedCities() {
   const [pollutedCities, setPolutedCities] = useState(false);
-
   useEffect(() => {
     const socket = socketIOClient(ENDPOINT);
 
