@@ -24,7 +24,7 @@ const sendRandomJson = (socket) => {
     (err, data) => {
       if (err) throw err;
       const pollutionCities = JSON.parse(data);
-      socket.emit("FromAPI", pollutionCities);
+      socket.emit("serverPollutedEurope", pollutionCities);
     }
   );
 };
