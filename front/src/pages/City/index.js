@@ -4,10 +4,11 @@ import PropTypes from "prop-types";
 //Components
 import { Map } from "../../components/Map";
 import { Spinner } from "../../components/Spinner";
+import { BackIcon } from "../../components/Icons/Back";
 //hooks
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 //wouter
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 
 export const City = () => {
   const [location, setLocation] = useLocation();
@@ -16,6 +17,11 @@ export const City = () => {
 
   return (
     <div>
+      <Link href="/">
+        <i>
+          <BackIcon />
+        </i>
+      </Link>
       <h1>Map </h1>
       <div>
         {localStorage ? (

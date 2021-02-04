@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 //wouter
-import { Link, useLocation } from "wouter";
+import { useLocation } from "wouter";
 //hooks
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 //ReactTable
