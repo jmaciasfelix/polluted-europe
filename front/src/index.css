@@ -1,6 +1,10 @@
 :root {
   --color-primary: #09f;
   --color-background: #0099ff70;
+  --text-base-color: #000;
+  --text-title-color: #011440;
+  --text-subtitle-color: #001e63;
+  --text-small-color: #646262;
 }
 
 body {

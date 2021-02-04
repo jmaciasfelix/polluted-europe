@@ -33,7 +33,7 @@ const Styles = styled.div`
   }
 `;
 
-export const Table = ({ data }) => {
+export const Table = ({ pollutedCities }) => {
   const columns = React.useMemo(
     () => [
       {
@@ -51,6 +51,7 @@ export const Table = ({ data }) => {
     ],
     []
   );
+  const data = React.useMemo(() => pollutedCities, []);
 
   const {
     getTableProps,
@@ -102,7 +103,9 @@ export const Table = ({ data }) => {
           })}
         </tbody>
       </table>
-      <br />
     </Styles>
   );
 };
+
+//Note see https://codesandbox.io/s/github/tannerlinsley/react-table/tree/master/examples/filtering
+//Pending filter and useMemo in data

@@ -10,15 +10,18 @@ import socketIOClient from "socket.io-client";
  */
 export function usePollutedCities() {
   const [pollutedCities, setPolutedCities] = useState(false);
+  const [isLoading, setLoading] = useState(true);
+
   useEffect(() => {
     const socket = socketIOClient(ENDPOINT);
 
-    socket.on("serverPollutedEurope", (pollutedCities) =>
-      setPolutedCities(pollutedCities)
-    );
+    socket.on("serverPollutedEurope", (pollutedCities) => {
+      setPolutedCities(pollutedCities);
+      setLoading(false);
+    });
 
     return () => socket.disconnect();
   }, []);
 
-  return [pollutedCities];
+  return [pollutedCities, isLoading];
 }
