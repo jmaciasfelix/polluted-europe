@@ -3,120 +3,120 @@
     "rank": 1,
     "city": "Varna,Bulgaria",
     "pollutionIndex": 62.66,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 2,
     "city": "Moscow,Russia",
     "pollutionIndex": 62.25,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 3,
     "city": "Belgrade,Serbia",
     "pollutionIndex": 60.16,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 4,
     "city": "Bitola,NorthMacedonia",
     "pollutionIndex": 59.86,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 5,
     "city": "London,UnitedKingdom",
     "pollutionIndex": 59.56,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 6,
     "city": "Antwerp,Belgium",
     "pollutionIndex": 58.74,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 7,
     "city": "Wroclaw,Poland",
     "pollutionIndex": 58.63,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 8,
     "city": "Iasi,Romania",
     "pollutionIndex": 57.38,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 9,
     "city": "Madrid,Spain",
     "pollutionIndex": 54.78,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 10,
     "city": "Budapest,Hungary",
     "pollutionIndex": 54.57,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 11,
     "city": "Manchester,UnitedKingdom",
     "pollutionIndex": 54.07,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 12,
     "city": "Warsaw,Poland",
     "pollutionIndex": 51.92,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 13,
     "city": "Lyon,France",
     "pollutionIndex": 44.48,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 14,
     "city": "Brno,Czech",
     "pollutionIndex": 44.97,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 15,
     "city": "Birmingham,UnitedKingdom",
     "pollutionIndex": 43.22,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 16,
     "city": "Strasbourg,France",
     "pollutionIndex": 43.13,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 17,
     "city": "Valencia,Spain",
     "pollutionIndex": 42.37,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 18,
     "city": "Bratislava,Slovakia",
     "pollutionIndex": 42.04,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 19,
     "city": "NoviSad,Serbia",
     "pollutionIndex": 42.03,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   },
   {
     "rank": 20,
     "city": "Berlin,Germany",
     "pollutionIndex": 41.32,
-    "coordinate": [43, -8]
+    "coordinate": [-3.70379, 40.416775]
   }
 ]

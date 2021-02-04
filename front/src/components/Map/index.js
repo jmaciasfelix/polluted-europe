@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 //React-mapbox-gl
-import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
+import ReactMapboxGl, { Layer, Feature, Popup } from "react-mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 //constant
 import { TOKEN_MAP } from "../../constant";
@@ -11,9 +11,7 @@ const ReactMap = ReactMapboxGl({
   accessToken: TOKEN_MAP,
 });
 
-export const Map = ({ longitude = -8.61099, latitude = 41.14961 }) => {
-  const coordinates = [longitude, latitude];
-
+export const Map = ({ pollutionIndex, coordinate }) => {
   return (
     <ReactMap
       style="mapbox://styles/mapbox/streets-v9"
@@ -21,11 +19,18 @@ export const Map = ({ longitude = -8.61099, latitude = 41.14961 }) => {
         height: "80vh",
         width: "80vw",
       }}
-      center={coordinates}
+      center={coordinate}
     >
-      <Layer type="symbol" id="marker" layout={{ "icon-image": "marker-15" }}>
-        <Feature coordinates={coordinates} />
-      </Layer>
+      <Popup
+        coordinates={coordinate}
+        closeButton={true}
+        closeOnClick={false}
+        anchor="top"
+      >
+        <div>
+          <p>{`🦠 Polution Index ${pollutionIndex}`}</p>
+        </div>
+      </Popup>
     </ReactMap>
   );
 };
