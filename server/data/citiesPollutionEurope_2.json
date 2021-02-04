@@ -3,120 +3,120 @@
     "rank": 1,
     "city": "Tetovo,NorthMacedonia",
     "pollutionIndex": 97.57,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [20.959682, 42.006191]
   },
   {
     "rank": 2,
     "city": "Skopje,NorthMacedonia",
     "pollutionIndex": 83.53,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [21.4314, 41.9965]
   },
   {
     "rank": 3,
     "city": "Naples,Italy",
     "pollutionIndex": 83.08,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [14.305573, 40.853294]
   },
   {
     "rank": 4,
     "city": "Tirana,Albania",
     "pollutionIndex": 79.14,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [19.81889, 41.3275]
   },
   {
     "rank": 5,
     "city": "Turin,Italy",
     "pollutionIndex": 74.49,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [7.742615, 45.116177]
   },
   {
     "rank": 6,
     "city": "Bucharest,Romania",
     "pollutionIndex": 72.08,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [26.096306, 44.439663]
   },
   {
     "rank": 7,
     "city": "Sarajevo,Bosnia",
     "pollutionIndex": 70.87,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [18.35644, 43.84864]
   },
   {
     "rank": 8,
     "city": "Krakow,Poland",
     "pollutionIndex": 70.53,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [19.98333, 50.2]
   },
   {
     "rank": 9,
     "city": "Barcelona,Spain",
     "pollutionIndex": 69.84,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [2.154007, 41.390205]
   },
   {
     "rank": 10,
     "city": "Kiev,Ukraine",
     "pollutionIndex": 68.85,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [30.523333, 50.450001]
   },
   {
     "rank": 11,
     "city": "Rome,Italy",
     "pollutionIndex": 67.5,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [12.496366, 41.902782]
   },
   {
     "rank": 12,
     "city": "Plovdiv,Bulgaria",
     "pollutionIndex": 66.54,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [24.75, 42.15]
   },
   {
     "rank": 13,
     "city": "Paris,France",
     "pollutionIndex": 66.5,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [2.349014, 48.864716]
   },
   {
     "rank": 14,
     "city": "Thessaloniki,Greece",
     "pollutionIndex": 64.57,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [22.939524, 40.640266]
   },
   {
     "rank": 15,
     "city": "SaintPetersburg,Russia",
     "pollutionIndex": 64.37,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [30.30861, 59.9375]
   },
   {
     "rank": 16,
     "city": "Milan,Italy",
     "pollutionIndex": 63.85,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [9.191383, 45.464211]
   },
   {
     "rank": 17,
     "city": "Brussels,Belgium",
     "pollutionIndex": 63.29,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [4.3488, 50.8505]
   },
   {
     "rank": 18,
     "city": "Timisoara,Romania",
     "pollutionIndex": 62.96,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [21.22678, 45.760696]
   },
   {
     "rank": 19,
     "city": "Sofia,Bulgaria",
     "pollutionIndex": 62.77,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [23.319941, 42.698334]
   },
   {
     "rank": 20,
     "city": "Athens,Greece",
     "pollutionIndex": 62.74,
-    "coordinate": [-3.70379, 40.416775]
+    "coordinate": [23.72611, 37.970833]
   }
 ]
