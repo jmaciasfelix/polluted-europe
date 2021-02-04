@@ -1,22 +1,122 @@
 [
-  { "rank": 1, "city": "Frankfurt,Germany", "pollutionIndex": 40.58 },
-  { "rank": 2, "city": "Porto,Portugal", "pollutionIndex": 38.99 },
-  { "rank": 3, "city": "Riga,Latvia", "pollutionIndex": 37.95 },
-  { "rank": 4, "city": "ClujNapoca,Romania", "pollutionIndex": 37.56 },
-  { "rank": 5, "city": "Stuttgart,Germany", "pollutionIndex": 36.88 },
-  { "rank": 6, "city": "Prague,CzechRepublic", "pollutionIndex": 36.8 },
-  { "rank": 7, "city": "Lisbon,Portugal", "pollutionIndex": 36.29 },
-  { "rank": 8, "city": "Zagreb,Croatia", "pollutionIndex": 35.85 },
-  { "rank": 9, "city": "Dublin,Ireland", "pollutionIndex": 35.22 },
-  { "rank": 10, "city": "Hamburg,Germany", "pollutionIndex": 31.37 },
-  { "rank": 11, "city": "Glasgow,UnitedKingdom", "pollutionIndex": 30.67 },
-  { "rank": 12, "city": "Amsterdam,Netherlands", "pollutionIndex": 30.1 },
-  { "rank": 13, "city": "Gdansk,Poland", "pollutionIndex": 28.71 },
-  { "rank": 14, "city": "Geneva,Switzerland", "pollutionIndex": 28.69 },
-  { "rank": 15, "city": "Basel,Switzerland", "pollutionIndex": 28.54 },
-  { "rank": 16, "city": "Vilnius,Lithuania", "pollutionIndex": 28.34 },
-  { "rank": 17, "city": "Ljubljana,Slovenia", "pollutionIndex": 26.93 },
-  { "rank": 18, "city": "TheHague,Netherlands", "pollutionIndex": 25.76 },
-  { "rank": 19, "city": "Oslo, Norway", "pollutionIndex": 24.32 },
-  { "rank": 20, "city": "Budapest,Hungary", "pollutionIndex": 54.57 }
+  {
+    "rank": 1,
+    "city": "Frankfurt,Germany",
+    "pollutionIndex": 40.58,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 2,
+    "city": "Porto,Portugal",
+    "pollutionIndex": 38.99,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 3,
+    "city": "Riga,Latvia",
+    "pollutionIndex": 37.95,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 4,
+    "city": "ClujNapoca,Romania",
+    "pollutionIndex": 37.56,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 5,
+    "city": "Stuttgart,Germany",
+    "pollutionIndex": 36.88,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 6,
+    "city": "Prague,CzechRepublic",
+    "pollutionIndex": 36.8,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 7,
+    "city": "Lisbon,Portugal",
+    "pollutionIndex": 36.29,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 8,
+    "city": "Zagreb,Croatia",
+    "pollutionIndex": 35.85,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 9,
+    "city": "Dublin,Ireland",
+    "pollutionIndex": 35.22,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 10,
+    "city": "Hamburg,Germany",
+    "pollutionIndex": 31.37,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 11,
+    "city": "Glasgow,UnitedKingdom",
+    "pollutionIndex": 30.67,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 12,
+    "city": "Amsterdam,Netherlands",
+    "pollutionIndex": 30.1,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 13,
+    "city": "Gdansk,Poland",
+    "pollutionIndex": 28.71,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 14,
+    "city": "Geneva,Switzerland",
+    "pollutionIndex": 28.69,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 15,
+    "city": "Basel,Switzerland",
+    "pollutionIndex": 28.54,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 16,
+    "city": "Vilnius,Lithuania",
+    "pollutionIndex": 28.34,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 17,
+    "city": "Ljubljana,Slovenia",
+    "pollutionIndex": 26.93,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 18,
+    "city": "TheHague,Netherlands",
+    "pollutionIndex": 25.76,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 19,
+    "city": "Oslo, Norway",
+    "pollutionIndex": 24.32,
+    "coordinate": [-3.70379, 40.416775]
+  },
+  {
+    "rank": 20,
+    "city": "Budapest,Hungary",
+    "pollutionIndex": 54.57,
+    "coordinate": [-3.70379, 40.416775]
+  }
 ]

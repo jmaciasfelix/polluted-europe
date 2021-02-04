@@ -1,22 +1,20 @@
-import React, { useState, useEffect } from "react";
-import socketIOClient from "socket.io-client";
-const ENDPOINT = "http://127.0.0.1:8080";
+import React from "react";
+import PropTypes from "prop-types";
+//pages
+import { Home } from "./pages/Home";
+//components
+import { Layout } from "./components/Layout";
+import { City } from "./pages/City";
+//wouter
+import { Switch, Route } from "wouter";
 
-function App() {
-  const [response, setResponse] = useState(null);
-
-  useEffect(() => {
-    const socket = socketIOClient(ENDPOINT);
-
-    socket.on("FromAPI", (data) => {
-      setResponse(data);
-      console.log(data);
-    });
-
-    return () => socket.disconnect();
-  }, []);
-
-  return <p>It's</p>;
-}
+const App = () => (
+  <Layout>
+    <Switch>
+      <Route path="/" component={Home} />
+      <Route path="/map/:coordinates" component={City} />
+    </Switch>
+  </Layout>
+);
 
 export default App;
