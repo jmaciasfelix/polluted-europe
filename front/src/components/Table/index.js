@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+//wouter
+import { Link, useLocation } from "wouter";
+//hooks
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 //ReactTable
 import { useTable, useSortBy } from "react-table";
 
@@ -34,6 +38,8 @@ const Styles = styled.div`
 `;
 
 export const Table = ({ pollutedCities }) => {
+  const [location, setLocation] = useLocation();
+  const [localStorage, setLocalStorage] = useLocalStorage();
   const columns = React.useMemo(
     () => [
       {
@@ -67,6 +73,12 @@ export const Table = ({ pollutedCities }) => {
     useSortBy
   );
 
+  const selectCity = (city, pollutionIndex, coordinate) => {
+    const nameCity = city.replaceAll(",", "_");
+    setLocalStorage(nameCity, { pollutionIndex, coordinate });
+    setLocation(`map/${nameCity}`);
+  };
+
   return (
     <Styles>
       <table {...getTableProps()}>
@@ -93,11 +105,21 @@ export const Table = ({ pollutedCities }) => {
             prepareRow(row);
             return (
               <tr {...row.getRowProps()}>
-                {row.cells.map((cell) => {
-                  return (
-                    <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
-                  );
-                })}
+                {row.cells.map((cell) => (
+                  <td
+                    onClick={() =>
+                      selectCity(
+                        cell.row.original.city,
+                        cell.row.original.pollutionIndex,
+                        cell.row.original.coordinate
+                      )
+                    }
+                    key={cell.row.original.city}
+                    {...cell.getCellProps()}
+                  >
+                    {cell.render("Cell")}
+                  </td>
+                ))}
               </tr>
             );
           })}
@@ -108,4 +130,3 @@ export const Table = ({ pollutedCities }) => {
 };
 
 //Note see https://codesandbox.io/s/github/tannerlinsley/react-table/tree/master/examples/filtering
-//Pending filter and useMemo in data
