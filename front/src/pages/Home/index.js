@@ -31,10 +31,60 @@ const Container = styled.div`
     font-size: 1rem;
     padding: 0.5rem 0 0.5rem;
   }
+  figure {
+    padding: 1rem 0;
+    img {
+      width: 100%;
+    }
+  }
+`;
+
+const Error = styled.h2`
+  color: var(--text-subtitle-color);
+  font-weight: 600;
+  font-size: 32px;
+  padding-right: 2rem;
+  margin: 0;
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
+`;
+
+const Alert = styled.div`
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Retry = styled.div`
+  a {
+    align-items: center;
+    background: #fff;
+    border-radius: 50000px;
+    border: 1px solid #000;
+    box-shadow: #92d5ff 4px 4px;
+    display: flex;
+    font-size: 1.3rem;
+    padding: 8px 18px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 110%;
+    @media (max-width: 600px) {
+      font-size: 0.9rem;
+      padding: 3px 16px;
+    }
+  }
+  a:hover {
+    background: rgb(210, 237, 255);
+    box-shadow: none;
+    transform: translate3d(4px, 4px, 0);
+    transition: all 0.1s ease;
+  }
 `;
 
 export const Home = () => {
-  const [pollutedCities, isLoading] = usePollutedCities();
+  const [pollutedCities, isLoading, isError, retry] = usePollutedCities();
   const [location, setLocation] = useLocation();
   const [localStorage, setLocalStorage] = useLocalStorage();
 
@@ -59,6 +109,25 @@ export const Home = () => {
       </div>
 
       {isLoading && <Spinner color={"#001e63"} />}
+
+      {isError && !isLoading && (
+        <div>
+          <>
+            <figure>
+              <img
+                src="https://media.giphy.com/media/XUFPGrX5Zis6Y/giphy.gif"
+                alt="Explosion"
+              />
+            </figure>
+            <Alert>
+              <Error>Error connection server</Error>
+              <Retry>
+                <a onClick={() => retry()}>Retry 🔃</a>
+              </Retry>
+            </Alert>
+          </>
+        </div>
+      )}
 
       {pollutedCities && (
         <>

@@ -11,8 +11,18 @@ import socketIOClient from "socket.io-client";
 export function usePollutedCities() {
   const [pollutedCities, setPolutedCities] = useState(false);
   const [isLoading, setLoading] = useState(true);
+  const [isError, setError] = useState(false);
+
+  const handleErrors = (socket) => {
+    socket.disconnect();
+    setLoading(false);
+    setError(true);
+  };
+
+  const retry = () => setError(false);
 
   useEffect(() => {
+    setLoading(true);
     const socket = socketIOClient(ENDPOINT);
 
     socket.on("serverPollutedEurope", (pollutedCities) => {
@@ -20,8 +30,11 @@ export function usePollutedCities() {
       setLoading(false);
     });
 
-    return () => socket.disconnect();
-  }, []);
+    socket.on("connect_error", () => handleErrors(socket));
+    socket.on("connect_failed", () => handleErrors(socket));
 
-  return [pollutedCities, isLoading];
+    return () => socket.disconnect();
+  }, [isError]);
+
+  return [pollutedCities, isLoading, isError, retry];
 }

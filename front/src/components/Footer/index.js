@@ -65,12 +65,16 @@ const FooterContainer = styled.footer`
 export const Footer = () => (
   <FooterContainer>
     <div>
-      <a href="https://midu.dev" target="_blank" rel="noreferrer">
+      <a
+        href="https://jmaciasfelix.github.io/"
+        target="_blank"
+        rel="noreferrer"
+      >
         Desarrollado por Jesús Macías
       </a>
       <span>&bull;</span>
       <a
-        href="https://github.com/jmaciasfelix/polluted-europea"
+        href="https://github.com/jmaciasfelix"
         rel="nofollow noreferrer"
         target="_blank"
       >
