@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 //Components
 import { Map } from "../../components/Map";
 import { Spinner } from "../../components/Spinner";
@@ -45,9 +44,9 @@ const Info = styled.small`
 `;
 
 export const City = () => {
-  const [location, setLocation] = useLocation();
+  const [location] = useLocation();
   const key = location.replaceAll("/map/", "");
-  const [localStorage, setLocalStorage] = useLocalStorage(key);
+  const [localStorage] = useLocalStorage(key);
 
   const getCoordinates = () => {
     const { coordinate } = localStorage;

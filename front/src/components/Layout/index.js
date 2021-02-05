@@ -21,3 +21,7 @@ const Container = styled.div`
 `;
 
 export const Layout = ({ children }) => <Container>{children}</Container>;
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};

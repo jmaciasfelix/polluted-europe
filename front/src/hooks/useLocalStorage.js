@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
-
+/**
+ * useLocalStorage allow get or set a value in localstorage
+ * @return { Object || null } storedValue
+ * @return { function } setValue
+ */
 export function useLocalStorage(key) {
   const [storedValue, setStoredValue] = useState(null);
 
@@ -8,7 +12,7 @@ export function useLocalStorage(key) {
       const item = window.localStorage.getItem(key);
       item && setStoredValue(JSON.parse(item));
     }
-  }, []);
+  }, [key]);
 
   const setValue = (key, value) => {
     try {

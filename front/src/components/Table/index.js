@@ -85,7 +85,7 @@ export const Table = ({ pollutedCities, selectCity }) => {
     ],
     []
   );
-  const data = React.useMemo(() => pollutedCities, []);
+  const data = React.useMemo(() => pollutedCities, [pollutedCities]);
 
   const {
     getTableProps,
@@ -151,4 +151,14 @@ export const Table = ({ pollutedCities, selectCity }) => {
   );
 };
 
-//Note see https://codesandbox.io/s/github/tannerlinsley/react-table/tree/master/examples/filtering
+Table.propTypes = {
+  selectCity: PropTypes.func.isRequired,
+  pollutedCities: PropTypes.arrayOf(
+    PropTypes.shape({
+      city: PropTypes.string.isRequired,
+      pollutionIndex: PropTypes.number.isRequired,
+      coordinate: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
+      rank: PropTypes.number.isRequired,
+    }).isRequired
+  ).isRequired,
+};

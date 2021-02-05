@@ -62,3 +62,15 @@ export const Podium = ({ selectCity, podiumCities }) => {
     </Container>
   );
 };
+
+Podium.propTypes = {
+  selectCity: PropTypes.func.isRequired,
+  podiumCities: PropTypes.arrayOf(
+    PropTypes.shape({
+      city: PropTypes.string.isRequired,
+      pollutionIndex: PropTypes.number.isRequired,
+      coordinate: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
+      rank: PropTypes.number.isRequired,
+    }).isRequired
+  ).isRequired,
+};

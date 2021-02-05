@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 //components
 import { Table } from "../../components/Table";
 import { Spinner } from "../../components/Spinner";
@@ -59,7 +58,7 @@ const Alert = styled.div`
 `;
 
 const Retry = styled.div`
-  a {
+  button {
     align-items: center;
     background: #fff;
     border-radius: 50000px;
@@ -76,7 +75,7 @@ const Retry = styled.div`
       padding: 3px 16px;
     }
   }
-  a:hover {
+  button:hover {
     background: rgb(210, 237, 255);
     box-shadow: none;
     transform: translate3d(4px, 4px, 0);
@@ -92,8 +91,8 @@ export const Home = () => {
     retry,
     lastUpdate,
   ] = usePollutedCities();
-  const [location, setLocation] = useLocation();
-  const [localStorage, setLocalStorage] = useLocalStorage();
+  const [, setLocation] = useLocation();
+  const [, setLocalStorage] = useLocalStorage();
 
   const selectCity = (city, pollutionIndex, coordinate) => {
     const nameCity = city.replaceAll(",", "_");
@@ -129,7 +128,7 @@ export const Home = () => {
             <Alert>
               <Error>Error connection server</Error>
               <Retry>
-                <a onClick={() => retry()}>Retry 🔃</a>
+                <button onClick={() => retry()}>Retry 🔃</button>
               </Retry>
             </Alert>
           </>

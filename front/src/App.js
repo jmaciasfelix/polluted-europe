@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 //pages
 import { Home } from "./pages/Home";
 //components
