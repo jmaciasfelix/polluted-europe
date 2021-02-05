@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 const Container = styled.div`
   padding-right: 15px;
   padding-left: 15px;
+  padding-bottom: 100px;
   margin-right: auto;
   margin-left: auto;
 
