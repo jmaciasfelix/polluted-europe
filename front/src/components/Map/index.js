@@ -11,26 +11,30 @@ const ReactMap = ReactMapboxGl({
   accessToken: TOKEN_MAP,
 });
 
+const Pop = styled.small`
+  margin: 0 2rem;
+`;
+
 export const Map = ({ pollutionIndex, coordinate }) => {
   return (
-    <ReactMap
-      style="mapbox://styles/mapbox/streets-v9"
-      containerStyle={{
-        height: "80vh",
-        width: "80vw",
-      }}
-      center={coordinate}
-    >
-      <Popup
-        coordinates={coordinate}
-        closeButton={true}
-        closeOnClick={false}
-        anchor="top"
+    <div>
+      <ReactMap
+        style="mapbox://styles/mapbox/streets-v9"
+        containerStyle={{
+          height: "45vh",
+          width: "100%",
+        }}
+        center={coordinate}
       >
-        <div>
-          <p>{`🦠 Polution Index ${pollutionIndex}`}</p>
-        </div>
-      </Popup>
-    </ReactMap>
+        <Popup
+          coordinates={coordinate}
+          closeButton={true}
+          closeOnClick={false}
+          anchor="top"
+        >
+          <Pop>{`🦠 Polution Index ${pollutionIndex}`}</Pop>
+        </Popup>
+      </ReactMap>
+    </div>
   );
 };
