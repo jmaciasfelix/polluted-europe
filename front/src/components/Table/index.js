@@ -8,32 +8,66 @@ import { useLocalStorage } from "../../hooks/useLocalStorage";
 //ReactTable
 import { useTable, useSortBy } from "react-table";
 
-const Styles = styled.div`
-  padding: 1rem;
+const Container = styled.div`
+  max-width: 100vw;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 2px solid #111;
+  box-shadow: rgb(210, 239, 253) 14px 14px;
+  margin-bottom: 4rem;
+`;
 
-  table {
-    border-spacing: 0;
-    border: 1px solid black;
+const TableStyle = styled.table`
+  background: #fafafa;
+  font-size: 0.8rem;
+  /* max-width: 1000px; */
+  width: 100%;
+  th {
+    border-bottom: 2px solid #555;
+    border-right: 1px solid #ccc;
+    padding: 4px;
+  }
+  tr {
+    background: #fff;
+  }
+  tbody > tr > td {
+    border-right: 1px solid #eee;
+    text-align: right;
+    padding: 4px 12px 4px;
+  }
+  tbody > tr > td:first-child {
+    font-weight: bold;
+  }
+  tbody > tr > td:last-child {
+    border-right: 0;
+  }
+  thead tr {
+    border-bottom: 1px solid #333;
+  }
+  thead th:hover {
+    background-color: #caeeff;
+  }
+  tbody tr:hover {
+    background-color: #6cd0ff;
+    cursor: pointer;
+  }
 
-    tr {
-      :last-child {
-        td {
-          border-bottom: 0;
-        }
-      }
+  @media (max-width: 600px) {
+    tr td:first-child {
+      text-align: center;
     }
 
-    th,
-    td {
-      margin: 0;
-      padding: 0.5rem;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
-
-      :last-child {
-        border-right: 0;
-      }
+    tr th {
+      display: none;
     }
+  }
+`;
+
+const Cell = styled.td`
+  span {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
   }
 `;
 
@@ -80,8 +114,8 @@ export const Table = ({ pollutedCities }) => {
   };
 
   return (
-    <Styles>
-      <table {...getTableProps()}>
+    <Container>
+      <TableStyle {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -106,7 +140,7 @@ export const Table = ({ pollutedCities }) => {
             return (
               <tr {...row.getRowProps()}>
                 {row.cells.map((cell) => (
-                  <td
+                  <Cell
                     onClick={() =>
                       selectCity(
                         cell.row.original.city,
@@ -118,14 +152,14 @@ export const Table = ({ pollutedCities }) => {
                     {...cell.getCellProps()}
                   >
                     {cell.render("Cell")}
-                  </td>
+                  </Cell>
                 ))}
               </tr>
             );
           })}
         </tbody>
-      </table>
-    </Styles>
+      </TableStyle>
+    </Container>
   );
 };
 
