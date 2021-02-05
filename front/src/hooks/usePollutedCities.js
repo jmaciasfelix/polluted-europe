@@ -9,23 +9,33 @@ import socketIOClient from "socket.io-client";
  * @return { Object[] } pollutedCities
  */
 export function usePollutedCities() {
-  const [pollutedCities, setPolutedCities] = useState(false);
+  const [pollutedCities, setPolutedCities] = useState(null);
   const [isLoading, setLoading] = useState(true);
   const [isError, setError] = useState(false);
+  const [lastUpdate, setLastUpdate] = useState(null);
 
   const handleErrors = (socket) => {
     socket.disconnect();
     setLoading(false);
+    setPolutedCities(null);
     setError(true);
   };
 
   const retry = () => setError(false);
+  const getDate = () =>
+    new Intl.DateTimeFormat("en-GB", {
+      dateStyle: "full",
+      timeStyle: "long",
+    })
+      .format(Date.now())
+      .replace("CET", "");
 
   useEffect(() => {
     setLoading(true);
     const socket = socketIOClient(ENDPOINT);
 
     socket.on("serverPollutedEurope", (pollutedCities) => {
+      setLastUpdate(getDate());
       setPolutedCities(pollutedCities);
       setLoading(false);
     });
@@ -36,5 +46,5 @@ export function usePollutedCities() {
     return () => socket.disconnect();
   }, [isError]);
 
-  return [pollutedCities, isLoading, isError, retry];
+  return [pollutedCities, isLoading, isError, retry, lastUpdate];
 }

@@ -20,6 +20,7 @@ const Container = styled.div`
     line-height: 1.15;
     font-size: 3rem;
     padding-top: 4rem;
+    padding-bottom: 0.4rem;
   }
   div {
     text-align: center;
@@ -84,7 +85,13 @@ const Retry = styled.div`
 `;
 
 export const Home = () => {
-  const [pollutedCities, isLoading, isError, retry] = usePollutedCities();
+  const [
+    pollutedCities,
+    isLoading,
+    isError,
+    retry,
+    lastUpdate,
+  ] = usePollutedCities();
   const [location, setLocation] = useLocation();
   const [localStorage, setLocalStorage] = useLocalStorage();
 
@@ -105,7 +112,7 @@ export const Home = () => {
     <Container>
       <div>
         <h1>🏆 TOP 20 CITIES POLLUTED IN EUROPE 🌍</h1>
-        <small>Datos actualizados hace 1 horas</small>
+        {!isError && !isLoading && <small>Last update on {lastUpdate}</small>}
       </div>
 
       {isLoading && <Spinner color={"#001e63"} />}
