@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-//wouter
-import { useLocation } from "wouter";
-//hooks
-import { useLocalStorage } from "../../hooks/useLocalStorage";
 //ReactTable
 import { useTable, useSortBy } from "react-table";
 
@@ -71,9 +67,7 @@ const Cell = styled.td`
   }
 `;
 
-export const Table = ({ pollutedCities }) => {
-  const [location, setLocation] = useLocation();
-  const [localStorage, setLocalStorage] = useLocalStorage();
+export const Table = ({ pollutedCities, selectCity }) => {
   const columns = React.useMemo(
     () => [
       {
@@ -106,12 +100,6 @@ export const Table = ({ pollutedCities }) => {
     },
     useSortBy
   );
-
-  const selectCity = (city, pollutionIndex, coordinate) => {
-    const nameCity = city.replaceAll(",", "_");
-    setLocalStorage(nameCity, { pollutionIndex, coordinate });
-    setLocation(`map/${nameCity}`);
-  };
 
   return (
     <Container>
