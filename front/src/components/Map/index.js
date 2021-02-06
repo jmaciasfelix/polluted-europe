@@ -31,7 +31,7 @@ export const Map = ({ pollutionIndex, coordinate }) => (
         closeOnClick={false}
         anchor="top"
       >
-        <Pop>{`🦠 Polution Index ${pollutionIndex}`}</Pop>
+        <Pop>{`☢️ Pollution Index ${pollutionIndex}`}</Pop>
       </Popup>
     </ReactMap>
   </div>
