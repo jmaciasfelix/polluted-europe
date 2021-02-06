@@ -9,4 +9,4 @@ npm start # Run server
 npm start 5000 # Run server and response data each 5 seconds
 ```
 
-**To start the front follow this guide [README.md](https://github.com/jmaciasfelix/polluted-europe/blob/2c7dae33aca5a107359f22ab4227e2db7a3c7b68/front/README.md)**
+**To start the front follow this guide [README.md](https://github.com/jmaciasfelix/polluted-europe/blob/main/front/README.md)**
