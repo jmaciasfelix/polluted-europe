@@ -1,15 +1,15 @@
 # Polluted Europe webApp 🌏
 
-Aplicación web que muestra las 20 ciudades más contaminantes de Europa. La pantalla principal muestra las tres ciudadas más contaminantes y la última actualización en la que se recibieron los datos. A continuación, se muestra una tabla con todas las ciudades. Esta tabla permite ordenar los elementos y filtrar las ciudades por su índice de polución.
+The web application that shows the 20 most polluting cities in Europe. The main screen shows the three most polluting cities and the last update in which the data was received. Below is a table with all cities. This table allows you to sort the elements and filter the cities by their pollution index.
 
-Cuando se hace clic en una ciudad se redirige a otra pestaña en la que se muestra las coordenadas de la ciudad seleccionada y un mapa indicando donde se encuentra la ciudad.
+When you click on a city you are redirected to another tab that shows the coordinates of the selected city and a map indicating where the city is located.
 
-## ¿Cómo lo ejecuto en local?
+## How do I run it locally?
 
 - [Readme Front](https://github.com/jmaciasfelix/polluted-europe/blob/2c7dae33aca5a107359f22ab4227e2db7a3c7b68/front/README.md)
 - [Readme Server](https://github.com/jmaciasfelix/polluted-europe/blob/8c18390247fc4be2dba17bb3deb30ca2ae91e3c3/server/README.md)
 
-## Tecnologías usadas
+## Technologies used
 
 - React
 - React Table
@@ -19,7 +19,7 @@ Cuando se hace clic en una ciudad se redirige a otra pestaña en la que se muest
 - React mapbox gl
 - Express
 
-## Bocetos
+## Draws
 
 ### Home
 
