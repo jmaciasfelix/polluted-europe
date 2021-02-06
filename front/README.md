@@ -1,70 +1,46 @@
-# Front Polluted Erupe
+# Polluted Europe webApp 🌏
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación web que muestra las 20 ciudades más contaminantes de Europa. La pantalla principal muestra las tres ciudadas más contaminantes y la última actualización en la que se recibieron los datos. A continuación, se muestra una tabla con todas las ciudades. Esta tabla permite ordenar los elementos y filtrar las ciudades por su índice de polución.
 
-## Available Scripts
+Cuando se hace clic en una ciudad se redirige a otra pestaña en la que se muestra las coordenadas de la ciudad seleccionada y un mapa indicando donde se encuentra la ciudad.
 
-In the project directory, you can run:
+Puedes ver imágenes en la sección [bocetos](#Bocetos)
 
-### `npm start`
+## ¿Cómo lo ejecuto en local?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Necesitarás tener instalado `Node.js` a partir de la versión 12 y tener acceso a una terminal para seguir los siguientes pasos:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+npm install # instalar las dependencias
+npm start # levantar el entorno de desarrollo
+npm test # ejecutar los test
+```
 
-### `npm test`
+**Es importante tener arrancado el servidor, para ello puedes seguir esta guía [README.md]()**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologías usadas
 
-### `npm run build`
+- React
+- React Table
+- Socket io
+- Styled components
+- Wouter
+- React mapbox gl
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Bocetos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Home
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Home img](https://github.com/jmaciasfelix/polluted-europe/blob/main/draw/Home-min.PNG)
 
-### `npm run eject`
+### City
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![City img](https://github.com/jmaciasfelix/polluted-europe/blob/main/draw/City-min.PNG)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Error
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Error img](https://github.com/jmaciasfelix/polluted-europe/blob/main/draw/Error-min.PNG)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### NotFound
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![NotFound img](https://github.com/jmaciasfelix/polluted-europe/blob/main/draw/NotFound-min.PNG)
