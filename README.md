@@ -6,8 +6,8 @@ When you click on a city you are redirected to another tab that shows the coordi
 
 ## How do I run it locally?
 
-- [Readme Front](https://github.com/jmaciasfelix/polluted-europe/blob/2c7dae33aca5a107359f22ab4227e2db7a3c7b68/front/README.md)
-- [Readme Server](https://github.com/jmaciasfelix/polluted-europe/blob/8c18390247fc4be2dba17bb3deb30ca2ae91e3c3/server/README.md)
+- [Readme Front](https://github.com/jmaciasfelix/polluted-europe/blob/main/front/README.md)
+- [Readme Server](https://github.com/jmaciasfelix/polluted-europe/blob/main/server/README.md)
 
 ## Technologies used
 
