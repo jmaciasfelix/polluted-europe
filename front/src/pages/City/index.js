@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 //Components
 import { Map } from "../../components/Map";
@@ -44,14 +44,18 @@ const Info = styled.small`
 `;
 
 export const City = () => {
-  const [location] = useLocation();
+  const [location, setLocation] = useLocation();
   const key = location.replaceAll("/map/", "");
-  const [localStorage] = useLocalStorage(key);
+  const [localStorage, , notExist] = useLocalStorage(key);
 
   const getCoordinates = () => {
     const { coordinate } = localStorage;
     return `${coordinate[1]}, ${coordinate[0]}`;
   };
+
+  useEffect(() => {
+    notExist && setLocation("/");
+  }, [notExist]);
 
   return (
     <Container>

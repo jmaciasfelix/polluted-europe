@@ -6,11 +6,12 @@ import { useState, useEffect } from "react";
  */
 export function useLocalStorage(key) {
   const [storedValue, setStoredValue] = useState(null);
+  const [notExist, setNotExit] = useState(false);
 
   useEffect(() => {
     if (key) {
       const item = window.localStorage.getItem(key);
-      item && setStoredValue(JSON.parse(item));
+      item ? setStoredValue(JSON.parse(item)) : setNotExit(true);
     }
   }, [key]);
 
@@ -23,5 +24,5 @@ export function useLocalStorage(key) {
     }
   };
 
-  return [storedValue, setValue];
+  return [storedValue, setValue, notExist];
 }
