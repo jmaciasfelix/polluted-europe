@@ -4,19 +4,10 @@ Aplicación web que muestra las 20 ciudades más contaminantes de Europa. La pan
 
 Cuando se hace clic en una ciudad se redirige a otra pestaña en la que se muestra las coordenadas de la ciudad seleccionada y un mapa indicando donde se encuentra la ciudad.
 
-Puedes ver imágenes en la sección [bocetos](#Bocetos)
-
 ## ¿Cómo lo ejecuto en local?
 
-Necesitarás tener instalado `Node.js` a partir de la versión 12 y tener acceso a una terminal para seguir los siguientes pasos:
-
-```
-npm install # instalar las dependencias
-npm start # levantar el entorno de desarrollo
-npm test # ejecutar los test
-```
-
-**Es importante tener arrancado el servidor, para ello puedes seguir esta guía [README.md]()**
+- [Readme Front](https://github.com/jmaciasfelix/polluted-europe/blob/2c7dae33aca5a107359f22ab4227e2db7a3c7b68/front/README.md)
+- [Readme Server](https://github.com/jmaciasfelix/polluted-europe/blob/8c18390247fc4be2dba17bb3deb30ca2ae91e3c3/server/README.md)
 
 ## Tecnologías usadas
 
@@ -26,7 +17,22 @@ npm test # ejecutar los test
 - Styled components
 - Wouter
 - React mapbox gl
+- Express
 
 ## Bocetos
 
-Pendiente
+### Home
+
+![Home img](https://github.com/jmaciasfelix/polluted-europe/blob/main/draw/Home-min.PNG)
+
+### City
+
+![City img](https://github.com/jmaciasfelix/polluted-europe/blob/main/draw/City-min.PNG)
+
+### Error
+
+![Error img](https://github.com/jmaciasfelix/polluted-europe/blob/main/draw/Error-min.PNG)
+
+### NotFound
+
+![NotFound img](https://github.com/jmaciasfelix/polluted-europe/blob/main/draw/NotFound-min.PNG)
