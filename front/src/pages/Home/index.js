@@ -143,7 +143,10 @@ export const Home = () => {
               .sort(() => sortByPollution)
               .slice(0, 3)}
           />
-          <Table selectCity={selectCity} pollutedCities={pollutedCities} />
+          <Table
+            selectCity={selectCity}
+            pollutedCities={pollutedCities.sort(() => sortByPollution)}
+          />
         </>
       )}
     </Container>

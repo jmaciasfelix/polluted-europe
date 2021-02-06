@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 //ReactTable
-import { useTable, useSortBy } from "react-table";
+import { useTable, useSortBy, useFilters } from "react-table";
+import { columnsTable } from "src/constant/columns";
 
 const Container = styled.div`
   max-width: 100vw;
@@ -53,9 +54,9 @@ const TableStyle = styled.table`
       text-align: center;
     }
 
-    tr th {
+    /* tr th {
       display: none;
-    }
+    } */
   }
 `;
 
@@ -68,23 +69,7 @@ const Cell = styled.td`
 `;
 
 export const Table = ({ pollutedCities, selectCity }) => {
-  const columns = React.useMemo(
-    () => [
-      {
-        Header: "Rank",
-        accessor: "rank",
-      },
-      {
-        Header: "Cities",
-        accessor: "city",
-      },
-      {
-        Header: "Index polluted",
-        accessor: "pollutionIndex",
-      },
-    ],
-    []
-  );
+  const columns = React.useMemo(() => columnsTable, []);
   const data = React.useMemo(() => pollutedCities, [pollutedCities]);
 
   const {
@@ -98,6 +83,7 @@ export const Table = ({ pollutedCities, selectCity }) => {
       columns,
       data,
     },
+    useFilters,
     useSortBy
   );
 
@@ -110,6 +96,9 @@ export const Table = ({ pollutedCities, selectCity }) => {
               {headerGroup.headers.map((column) => (
                 <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                   {column.render("Header")}
+                  <div>
+                    {column.canFilter ? column.render("Filter") : "null"}
+                  </div>
                   <span>
                     {column.isSorted
                       ? column.isSortedDesc
@@ -123,7 +112,7 @@ export const Table = ({ pollutedCities, selectCity }) => {
           ))}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {rows.map((row, i) => {
+          {rows.map((row) => {
             prepareRow(row);
             return (
               <tr {...row.getRowProps()}>

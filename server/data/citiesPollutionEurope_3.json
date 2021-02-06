@@ -1,122 +1,122 @@
 [
   {
     "rank": 1,
+    "city": "Budapest,Hungary",
+    "pollutionIndex": 54.57,
+    "coordinate": [19.04023, 47.49791]
+  },
+  {
+    "rank": 2,
     "city": "Frankfurt,Germany",
     "pollutionIndex": 40.58,
     "coordinate": [8.682127, 50.110924]
   },
   {
-    "rank": 2,
+    "rank": 3,
     "city": "Porto,Portugal",
     "pollutionIndex": 38.99,
     "coordinate": [-8.61099, 41.14961]
   },
   {
-    "rank": 3,
+    "rank": 4,
     "city": "Riga,Latvia",
     "pollutionIndex": 37.95,
     "coordinate": [24.105078, 56.946285]
   },
   {
-    "rank": 4,
+    "rank": 5,
     "city": "ClujNapoca,Romania",
     "pollutionIndex": 37.56,
     "coordinate": [23.591423, 46.770439]
   },
   {
-    "rank": 5,
+    "rank": 6,
     "city": "Stuttgart,Germany",
     "pollutionIndex": 36.88,
     "coordinate": [9.183333, 48.783333]
   },
   {
-    "rank": 6,
+    "rank": 7,
     "city": "Prague,CzechRepublic",
     "pollutionIndex": 36.8,
     "coordinate": [14.41854, 50.073658]
   },
   {
-    "rank": 7,
+    "rank": 8,
     "city": "Lisbon,Portugal",
     "pollutionIndex": 36.29,
     "coordinate": [-9.142685, 38.736946]
   },
   {
-    "rank": 8,
+    "rank": 9,
     "city": "Zagreb,Croatia",
     "pollutionIndex": 35.85,
     "coordinate": [15.9787, 45.814632]
   },
   {
-    "rank": 9,
+    "rank": 10,
     "city": "Dublin,Ireland",
     "pollutionIndex": 35.22,
     "coordinate": [-3.70379, 53.35014]
   },
   {
-    "rank": 10,
+    "rank": 11,
     "city": "Hamburg,Germany",
     "pollutionIndex": 31.37,
     "coordinate": [9.993682, 53.551086]
   },
   {
-    "rank": 11,
+    "rank": 12,
     "city": "Glasgow,UnitedKingdom",
     "pollutionIndex": 30.67,
     "coordinate": [-4.251433, 55.860916]
   },
   {
-    "rank": 12,
+    "rank": 13,
     "city": "Amsterdam,Netherlands",
     "pollutionIndex": 30.1,
     "coordinate": [4.89707, 52.377956]
   },
   {
-    "rank": 13,
+    "rank": 14,
     "city": "Gdansk,Poland",
     "pollutionIndex": 28.71,
     "coordinate": [18.646, 54.3521]
   },
   {
-    "rank": 14,
+    "rank": 15,
     "city": "Geneva,Switzerland",
     "pollutionIndex": 28.69,
     "coordinate": [6.143158, 46.204391]
   },
   {
-    "rank": 15,
+    "rank": 16,
     "city": "Basel,Switzerland",
     "pollutionIndex": 28.54,
     "coordinate": [7.588576, 47.559599]
   },
   {
-    "rank": 16,
+    "rank": 17,
     "city": "Vilnius,Lithuania",
     "pollutionIndex": 28.34,
     "coordinate": [25.2798, 54.68916]
   },
   {
-    "rank": 17,
+    "rank": 18,
     "city": "Ljubljana,Slovenia",
     "pollutionIndex": 26.93,
     "coordinate": [14.50575, 46.0569]
   },
   {
-    "rank": 18,
+    "rank": 19,
     "city": "TheHague,Netherlands",
     "pollutionIndex": 25.76,
     "coordinate": [4.29861, 52.07667]
   },
   {
-    "rank": 19,
+    "rank": 20,
     "city": "Oslo, Norway",
     "pollutionIndex": 24.32,
     "coordinate": [10.75793, 59.911491]
-  },
-  {
-    "rank": 20,
-    "city": "Budapest,Hungary",
-    "pollutionIndex": 54.57,
-    "coordinate": [19.04023, 47.49791]
   }
 ]
