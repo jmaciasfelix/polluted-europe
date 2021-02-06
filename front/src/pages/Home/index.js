@@ -118,20 +118,18 @@ export const Home = () => {
 
       {isError && !isLoading && (
         <div>
-          <>
-            <figure>
-              <img
-                src="https://media.giphy.com/media/XUFPGrX5Zis6Y/giphy.gif"
-                alt="Explosion"
-              />
-            </figure>
-            <Alert>
-              <Error>Error connection server</Error>
-              <Retry>
-                <button onClick={() => retry()}>Retry 🔃</button>
-              </Retry>
-            </Alert>
-          </>
+          <figure>
+            <img
+              src="https://media.giphy.com/media/XUFPGrX5Zis6Y/giphy.gif"
+              alt="Explosion"
+            />
+          </figure>
+          <Alert>
+            <Error>Error connection server</Error>
+            <Retry>
+              <button onClick={() => retry()}>Retry 🔃</button>
+            </Retry>
+          </Alert>
         </div>
       )}
 

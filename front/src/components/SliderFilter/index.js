@@ -100,9 +100,8 @@ const Container = styled.div`
   width: 100%;
 `;
 
-export const SliderFilter = ({
-  column: { filterValue, setFilter, preFilteredRows, id },
-}) => {
+export const SliderFilter = ({ column }) => {
+  const { filterValue, setFilter, preFilteredRows, id } = column;
   const [min, max] = React.useMemo(() => {
     let min = preFilteredRows.length ? preFilteredRows[0].values[id] : 0;
     let max = preFilteredRows.length ? preFilteredRows[0].values[id] : 0;
@@ -128,4 +127,6 @@ export const SliderFilter = ({
   );
 };
 
-SliderFilter.propTypes = {};
+SliderFilter.propTypes = {
+  column: PropTypes.object.isRequired,
+};
