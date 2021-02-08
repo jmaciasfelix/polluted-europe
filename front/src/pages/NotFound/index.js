@@ -52,7 +52,7 @@ export const NotFound = () => (
 
     <figure>
       <img
-        src="https://media1.giphy.com/media/xUPGcC7Q7C5ZODmomc/giphy.gif?cid=ecf05e47sm9d0h0q700nslmx463u0inxeng7359c6hpiuw3g&rid=giphy.gif"
+        src="https://media.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif"
         alt="404"
       />
     </figure>
