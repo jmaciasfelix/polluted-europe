@@ -55,7 +55,7 @@ export const City = () => {
 
   useEffect(() => {
     notExist && setLocation("/");
-  }, [notExist]);
+  }, [notExist, setLocation]);
 
   return (
     <Container>

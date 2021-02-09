@@ -18,10 +18,11 @@ app.get("/", (req, res) => {
 let interval;
 var timeInterval = 300000;
 var pollutionCities = null;
-const sendWithDelay = (socket, delay) =>
+
+const sendWithDelay = (socket) =>
   setTimeout(function () {
     socket.emit("serverPollutedEurope", pollutionCities);
-  }, delay);
+  }, Math.random() * 2000);
 
 const sendRandomJson = (socket) => {
   const min = 1;
@@ -42,7 +43,7 @@ io.on("connection", (socket) => {
 
   interval && clearInterval(interval);
   interval = setInterval(() => sendRandomJson(socket), timeInterval);
-  pollutionCities ? sendWithDelay(socket, 2000) : sendRandomJson(socket);
+  pollutionCities ? sendWithDelay(socket) : sendRandomJson(socket);
 
   socket.on("disconnect", () => {
     console.log("Client disconnected");

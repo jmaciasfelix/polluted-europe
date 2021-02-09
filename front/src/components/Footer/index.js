@@ -73,7 +73,7 @@ export const Footer = () => (
       </a>
       <span>&bull;</span>
       <a
-        href="https://github.com/jmaciasfelix"
+        href="https://github.com/jmaciasfelix/polluted-europe"
         rel="nofollow noreferrer"
         target="_blank"
       >
