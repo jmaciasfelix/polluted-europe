@@ -15,6 +15,14 @@ app.get("/", (req, res) => {
   res.status(200).send("Connection stablished");
 });
 
+let interval;
+var timeInterval = 300000;
+var pollutionCities = null;
+const sendWithDelay = (socket, delay) =>
+  setTimeout(function () {
+    socket.emit("serverPollutedEurope", pollutionCities);
+  }, delay);
+
 const sendRandomJson = (socket) => {
   const min = 1;
   const max = 4;
@@ -23,24 +31,18 @@ const sendRandomJson = (socket) => {
     `./data/citiesPollutionEurope_${randomNumber}.json`,
     (err, data) => {
       if (err) throw err;
-      const pollutionCities = JSON.parse(data);
-
-      setTimeout(function () {
-        socket.emit("serverPollutedEurope", pollutionCities);
-      }, 2000);
+      pollutionCities = JSON.parse(data);
+      sendWithDelay(socket);
     }
   );
 };
 
-let interval;
-var timeInterval = 300000;
-
 io.on("connection", (socket) => {
   console.log("New client connected");
-  sendRandomJson(socket);
 
   interval && clearInterval(interval);
   interval = setInterval(() => sendRandomJson(socket), timeInterval);
+  pollutionCities ? sendWithDelay(socket, 2000) : sendRandomJson(socket);
 
   socket.on("disconnect", () => {
     console.log("Client disconnected");
@@ -50,7 +52,6 @@ io.on("connection", (socket) => {
 
 server.listen(8080, () => {
   timeInterval = process.argv[2] ? process.argv[2] : timeInterval;
-
   console.log(`Listening on port 8080`);
   console.log(`The server sends new information every ${timeInterval} ms`);
 });
