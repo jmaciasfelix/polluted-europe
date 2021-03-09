@@ -49,6 +49,7 @@ export const Podium = ({ selectCity, podiumCities }) => {
       {podiumCities.map(({ pollutionIndex, coordinate, city }) => (
         <Card
           key={city}
+          role='role-podium'
           onClick={() => selectCity(city, pollutionIndex, coordinate)}
         >
           <section>

@@ -1,5 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import userEvent from '@testing-library/user-event'
 import { Podium } from "./index";
 
 const citiesPodium = [
@@ -23,27 +24,34 @@ const citiesPodium = [
   },
 ];
 
-describe("Podium tests", () => {
-  test("the pollution indices pass by props must be rendered", () => {
-    const { getAllByText } = render(
-      <Podium selectCity={() => {}} podiumCities={citiesPodium} />
-    );
-    const allPollutionIndex = getAllByText(/Index Polluted/i).map(
-      (uiElement) => uiElement.textContent
-    );
-    const allPollutionIndexMock = citiesPodium.map(
-      ({ pollutionIndex }) => `Index Polluted: ${pollutionIndex}`
-    );
-    expect(allPollutionIndex).toEqual(allPollutionIndexMock);
-  });
 
-  test("the cities pass by props must be rendered", () => {
-    render(<Podium selectCity={() => {}} podiumCities={citiesPodium} />);
-    const allNameCities = screen
-      .getAllByRole("heading")
-      .map((uiElement) => uiElement.textContent);
-    const allNameCitiesMock = citiesPodium.map(({ city }) => city);
+describe("test display Podium", () => {
+  beforeEach(() => {
+    const selectCityFn = jest.fn()
+    render(<Podium selectCity={selectCityFn} podiumCities={citiesPodium} />)
+  })
+  test("render Podium component successfuly", () => {
+    const nameCity = citiesPodium[0].city
+    expect(screen.getByText(nameCity)).toBeInTheDocument()
+  })
+  test("should display the cities podium pass from props", () => {
+    const renderValue = screen.queryAllByText(/Index Polluted/i).map((uiElement) => uiElement.textContent);
+    const expectedValue = citiesPodium.map(({ pollutionIndex }) => `Index Polluted: ${pollutionIndex}`);
 
-    expect(allNameCities).toEqual(allNameCitiesMock);
+    expect(renderValue).toEqual(expectedValue);
   });
+  
 });
+
+describe('test actions Podium', () => {
+  test("should be possible click a Podium", () => {
+    const selectCityFn = jest.fn()
+    render(<Podium selectCity={selectCityFn} podiumCities={citiesPodium} />)
+    const cardPodium = screen.getAllByRole('role-podium')[0]
+    
+    expect(cardPodium).toBeInTheDocument()
+    
+    userEvent.click(cardPodium)
+    expect(selectCityFn).toHaveBeenCalledTimes(1)
+  });
+})
